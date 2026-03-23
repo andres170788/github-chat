@@ -1,0 +1,72 @@
+/* GitHub Chat - Toggle Button & Panel */
+#github-chat-toggle {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #044f48, #2a7561);
+  border: none;
+  cursor: pointer;
+  z-index: 2147483646;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#github-chat-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
+}
+
+#github-chat-toggle svg {
+  width: 28px;
+  height: 28px;
+  fill: white;
+}
+
+#github-chat-toggle .close-icon {
+  display: none;
+}
+
+#github-chat-toggle.active .chat-icon {
+  display: none;
+}
+
+#github-chat-toggle.active .close-icon {
+  display: block;
+}
+
+#github-chat-panel {
+  position: fixed;
+  bottom: 92px;
+  right: 24px;
+  width: 320px;
+  height: 480px;
+  z-index: 2147483645;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  display: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+#github-chat-panel.visible {
+  display: block;
+  animation: github-chat-slide-in 0.25s ease-out;
+}
+
+@keyframes github-chat-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
