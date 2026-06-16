@@ -63,6 +63,33 @@ body {
   opacity: 0.7;
 }
 
+/* Minimize button (collapses the chat panel) */
+.chat-minimize {
+  margin-left: auto;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.12);
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.chat-minimize:hover {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.chat-minimize:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.6);
+  outline-offset: 1px;
+}
+
 /* Name Prompt */
 .name-prompt {
   flex: 1;

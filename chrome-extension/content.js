@@ -60,6 +60,15 @@
     }
   });
 
+  // Minimize request coming from inside the chat iframe (minimize button).
+  // Collapses the panel back to the toggle bubble without losing the conversation.
+  window.addEventListener('message', (event) => {
+    if (event.data && event.data.action === 'minimizeChat') {
+      panel.classList.remove('visible');
+      toggle.classList.remove('active');
+    }
+  });
+
   // Inject into page
   document.body.appendChild(toggle);
   document.body.appendChild(panel);

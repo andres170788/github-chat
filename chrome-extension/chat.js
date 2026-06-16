@@ -180,4 +180,13 @@
       sendMessage();
     }
   });
+
+  // Minimize button: ask the parent (content script) to collapse the chat panel.
+  // The chat lives in an iframe, so the panel visibility is controlled by content.js.
+  var minimizeBtn = document.getElementById('chat-minimize');
+  if (minimizeBtn) {
+    minimizeBtn.addEventListener('click', function () {
+      window.parent.postMessage({ action: 'minimizeChat' }, '*');
+    });
+  }
 })();
