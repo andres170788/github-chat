@@ -17,7 +17,7 @@
   ],
   "web_accessible_resources": [
     {
-      "resources": ["chat.html", "chat.js", "css/*", "images/*"],
+      "resources": ["chat.html", "chat.js", "css/*", "images/*", "lib/*"],
       "matches": ["https://github.com/*"]
     }
   ],

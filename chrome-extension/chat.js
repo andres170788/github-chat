@@ -189,4 +189,10 @@
       window.parent.postMessage({ action: 'minimizeChat' }, '*');
     });
   }
+
+  // Focus the name input programmatically. HTML autofocus is blocked in cross-origin
+  // iframes (console warning); doing it from JS once the frame is ready avoids that.
+  if (usernameInput) {
+    setTimeout(function () { usernameInput.focus(); }, 150);
+  }
 })();

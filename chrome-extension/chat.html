@@ -30,7 +30,7 @@
       <div class="name-prompt-inner">
         <h3>Welcome to GitHub Chat</h3>
         <p>Enter your name to start chatting</p>
-        <input type="text" id="username-input" placeholder="Your name..." autofocus>
+        <input type="text" id="username-input" placeholder="Your name...">
         <button id="username-submit" type="button">Join Chat</button>
       </div>
     </div>
@@ -45,8 +45,9 @@
     </div>
   </div>
 
-  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <!-- Firebase bundled locally: MV3 extension CSP (script-src 'self') blocks remote CDN scripts -->
+  <script src="lib/firebase-app.js"></script>
+  <script src="lib/firebase-firestore.js"></script>
   <script src="chat.js"></script>
 </body>
 </html>
